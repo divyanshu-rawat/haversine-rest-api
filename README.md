@@ -6,7 +6,8 @@
 
 #### Description 
 * Built a rest Api in Node.js by leveraging Node.js.
-* Used JSON web tokens for token-based user authentication
+* Used JSON web tokens for token-based user authentication.
+* Used ‘Haversine’ formula to calculate distance between given (Latitude,longitude) pairs.
 
 ##
 
@@ -94,3 +95,23 @@
 
 ##
 
+
+#### Examples
+
+* GET Request to URL http://localhost:4000/api/get_location    (without access token !)
+
+![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/without_access_token.png)
+
+##
+
+* GET Request to URL http://localhost:4000/api/get_location    (with access token!)
+
+![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/with_access_token.png)
+
+##
+
+* POST Request to URL http://localhost:4000/api/get_using_self  (Just Enter LAT,LNG,RADIUS !)
+
+![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/get_using_self.png)
+
+##
