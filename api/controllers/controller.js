@@ -115,6 +115,63 @@ exports.authenticate = function(req, res) {
 };
 
 
+exports.get_using_self = function (req,res) {
+
+	Location.find({},function (err,location) {
+		if(err)
+			res.send(err)
+
+		var updated_data = [];
+
+		console.log(req.body.lat,req.body.lng,req.body.radius);
+
+		var test_case = {
+
+			lat:req.body.lat,
+			lng:req.body.lng
+
+		};
+
+		for (let value of location) {
+		   var distance = Haversine(test_case.lat,test_case.lng,value.lat,value.lng);
+
+		   console.log('distance: ' + distance);
+
+		  if(distance < req.body.radius)
+		  {
+		  	 updated_data.push(value);
+		  }
+
+		}
+
+
+		console.log(updated_data);
+
+		res.json(updated_data);
+
+	});
+	
+}
+
+
+// using the ‘Haversine’ formula to calculate distance between given (Latitude,longitude) pairs.
+
+function Haversine(lat1,lon1,lat2,lon2) {
+
+  var R = 6371; // Radius of the earth in km
+  var dLat = degree_to_radian(lat2-lat1);  // deg2rad below
+  var dLon = degree_to_radian(lon2-lon1); 
+  
+  var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(degree_to_radian(lat1)) * Math.cos(degree_to_radian(lat2)) * Math.sin(dLon/2) * Math.sin(dLon/2);
+
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+  var d = R * c; // Distance in km
+  return d;
+}
+
+function degree_to_radian(deg) {
+  return deg * (Math.PI/180)
+}
 
 
 

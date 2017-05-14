@@ -56,6 +56,8 @@ module.exports = function(app){
 
 	app.get('/users',callback.get_users);
 
+	app.post('/get_using_self',callback.get_using_self);
+
     
 
 
