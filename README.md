@@ -37,7 +37,7 @@
 
 ```
 
-  app.post('/post_location',callback.post_location);
+  	app.post('/post_location',callback.post_location);
 
 	app.get('/get_location',callback.get_location);
 
@@ -48,6 +48,8 @@
 	app.get('/users',callback.get_users);
 
 	app.post('/get_using_self',callback.get_using_self);
+	
+	app.post('/get_using_self',callback.get_using_mongodb
 
 ```
 
@@ -168,6 +170,6 @@
 
 * POST Request to URL localhost:4000/api/get_using_mongodb  (Just Enter LAT,LNG,RADIUS !)
 
-![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/get_using_mongoDB.png
+![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/get_using_mongoDB.png)
 
 ##
