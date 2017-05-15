@@ -1,4 +1,4 @@
-### This Api compares results returned by ‘Haversine’ formula and MongoDB Geospatial Indexes and Queries feature when a   location is given nad we need to fetch all the nearby points within a radius
+### This Api compares results returned by ‘Haversine’ formula and MongoDB Geospatial Indexes and Queries feature when a   location is given and we need to fetch all the nearby points within a radius.
 
 ##
 
