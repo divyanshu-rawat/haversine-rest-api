@@ -9,9 +9,8 @@ var router  = express.Router();
 
 
 var port = process.env.PORT || 4000;
-
-var Task = require('./api/models/coordinates');
 var User   = require('./api/models/User');
+var Geojson   = require('./api/models/geojson');
 
 var config = require('./config');
 

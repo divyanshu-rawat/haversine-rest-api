@@ -58,7 +58,6 @@ module.exports = function(app){
 
 	app.post('/get_using_self',callback.get_using_self);
 
-    
-
+	app.post('/get_using_mongodb',callback.get_using_mongodb);
 
 };

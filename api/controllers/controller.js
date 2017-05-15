@@ -2,8 +2,8 @@
 
 var mongoose = require('mongoose');
 
-var Location = mongoose.model('Location');
 var User     = mongoose.model('User');
+var Geojson  = mongoose.model('Geojson');
 var jwt = require('jsonwebtoken');
 var express = require('express');
 var config = require('../../config.js');
@@ -20,15 +20,28 @@ exports.get_location = function(req,res){
 };
 
 
-exports.post_location = function (req,res) {
-	 new_location = Location(req.body);
-	
-	 new_location.save(function (err,location) {
-	 	 if(err)
-	 	 	res.send(err);
-	 	 res.json(location);
-	 }); 
+exports.post_location = function (req, res) {
+
+ new Geojson({
+
+    properties: {
+      name: req.body.name
+    },
+    location: {
+      type: "Point",
+      coordinates:req.body.coordinates
+    }
+  }).save(function (err, result) {
+    
+    if(err) throw err;
+   
+    console.log(result);
+    res.json(result);
+
+  });
+
 };
+
 
 exports.basic_route = function (req,res) {
 	     res.json({ message: 'Welcome to the API !' });
@@ -117,10 +130,10 @@ exports.authenticate = function(req, res) {
 
 exports.get_using_self = function (req,res) {
 
-	Location.find({},function (err,location) {
+	Geojson.find({},function (err,response) {
 		if(err)
 			res.send(err)
-
+		
 		var updated_data = [];
 
 		console.log(req.body.lat,req.body.lng,req.body.radius);
@@ -132,10 +145,11 @@ exports.get_using_self = function (req,res) {
 
 		};
 
-		for (let value of location) {
-		   var distance = Haversine(test_case.lat,test_case.lng,value.lat,value.lng);
+		for (let value of response) {
 
-		   console.log('distance: ' + distance);
+		  var distance = Haversine(test_case.lat,test_case.lng,value.location.coordinates[0],value.location.coordinates[1]);
+
+		  console.log('distance: ' + distance);
 
 		  if(distance < req.body.radius)
 		  {
@@ -175,3 +189,30 @@ function degree_to_radian(deg) {
 
 
 
+exports.get_using_mongodb = function (req,res) {
+
+
+	var radius_in_Miles = req.body.radius * 0.621371;
+	var coordinates = req.body.coordinates;
+
+	console.log(coordinates);
+
+	Geojson.where('location')
+
+	.within({ center: coordinates, radius: radius_in_Miles/3963.2 , unique: true, spherical: true })
+
+	.limit(10)
+
+	.exec(function(err, result) {
+
+		if(err) throw err;
+
+	    console.log(result);
+
+	    res.json(result);
+
+	});
+
+
+
+}
