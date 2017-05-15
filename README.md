@@ -1,4 +1,6 @@
-## aRest Api
+### This Api compares results returned by ‘Haversine’ formula and MongoDB Geospatial Indexes and Queries feature when a   location is given nad we need to fetch all the nearby points within a radius
+
+##
 
 [For Live Demo](https://myrestfulapplication.herokuapp.com/api/users)
 
@@ -26,6 +28,7 @@
 * Built a rest Api in Node.js by leveraging Node.js.
 * Used JSON web tokens for token-based user authentication.
 * Used ‘Haversine’ formula to calculate distance between given (Latitude,longitude) pairs.
+* This Api compares results returned by ‘Haversine’ formula and MongoDB Geospatial Indexes and Queries feature.
 
 ##
 
@@ -126,13 +129,6 @@
 
 ![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/with_access_token.png)
 
-##
-
-* POST Request to URL http://localhost:4000/api/get_using_self  (Just Enter LAT,LNG,RADIUS !)
-
-![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/get_using_self.png)
-
-##
 
 ##
 
@@ -148,3 +144,30 @@
 
 ##
 
+
+## Comparison 
+* Sample Data via Postman
+
+```
+	{"lat":"38.8","lng":"-77.0","radius":"10"}
+```
+
+* POST Request to URL http://localhost:4000/api/get_using_self  (Just Enter LAT,LNG,RADIUS !)
+
+![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/get_using_self.png)
+
+##
+
+* Sample Data via Postman
+
+```
+	{"radius":"10","coordinates":[38.8,-77.0]}
+```
+
+##
+
+* POST Request to URL localhost:4000/api/get_using_mongodb  (Just Enter LAT,LNG,RADIUS !)
+
+![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/get_using_mongoDB.png
+
+##
