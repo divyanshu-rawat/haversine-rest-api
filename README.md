@@ -1,7 +1,4 @@
-* This Api compares results returned by ‘Haversine’ formula and MongoDB Geospatial Indexes and Queries feature when a      
-  location is given and we need to fetch all the nearby points within a radius.
-
-##
+## Built a rest Api in Node.js by leveraging Node.js
 
 [![Join the chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/divyanshu001)
 [![Contact me on Codementor](https://cdn.codementor.io/badges/contact_me_github.svg)](https://www.codementor.io/divyanshurawat?utm_source=github&utm_medium=button&utm_term=divyanshurawat&utm_campaign=github)
@@ -15,7 +12,7 @@
 
 ### Live Application Back-End API 
 
-[![Live Demo Here](https://img.shields.io/badge/website-up-orange.svg)(https://myrestfulapplication.herokuapp.com/api/users)
+[![Live Demo Here](https://img.shields.io/badge/website-up-orange.svg)](https://myrestfulapplication.herokuapp.com/api/users)
 
 * Please Use POSTMAN for Testing Purpose !!
 * Authenticate Client First
@@ -26,10 +23,12 @@
 ##
 
 #### Description 
-* Built a rest Api in Node.js by leveraging Node.js.
+* This Api compares results returned by ‘Haversine’ formula and MongoDB Geospatial Indexes and Queries feature when a      
+  location is given and we need to fetch all the nearby points within a radius.
 * Used JSON web tokens for token-based user authentication.
 * Used ‘Haversine’ formula to calculate distance between given (Latitude,longitude) pairs.
 * This Api compares results returned by ‘Haversine’ formula and MongoDB Geospatial Indexes and Queries feature.
+
 
 ##
 
