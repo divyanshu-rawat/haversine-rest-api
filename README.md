@@ -147,7 +147,7 @@ Comparison between Haversine Formula v/s Mongodb Geospatial
 * Sample Data via Postman
 
 ```
-	{"lat":"38.8","lng":"-77.0","radius":"10"}
+	{"radius":"10","coordinates":[38.8,-77.0]} Data Format - [lat,long]
 ```
 
 * POST Request to URL localhost:4000/api/get_using_self
