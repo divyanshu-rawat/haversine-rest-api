@@ -142,7 +142,8 @@ Examples
 ##
 
 
-## Comparison between Haversine Formula v/s Mongodb Geospatial
+Comparison between Haversine Formula v/s Mongodb Geospatial
+
 * Sample Data via Postman
 
 ```
