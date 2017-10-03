@@ -8,6 +8,7 @@ module.exports = function(app){
 	var jwt = require('jsonwebtoken');
 
 	app.post('/authenticate', callback.authenticate);
+	app.post('/register',callback.register_user);
 
 	// route middleware to verify a token
 
@@ -51,8 +52,6 @@ module.exports = function(app){
 	app.get('/get_location',callback.get_location);
 
 	app.get('/',callback.basic_route);
-
-	app.post('/register',callback.register_user);
 
 	app.get('/users',callback.get_users);
 

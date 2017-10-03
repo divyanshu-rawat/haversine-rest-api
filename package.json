@@ -4,7 +4,7 @@
   "description": "Restful application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [
     "restapi",
@@ -21,8 +21,5 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
-  },
-  "scripts": {
-    "start": "node server.js"
   }
 }
