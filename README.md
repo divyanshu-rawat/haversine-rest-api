@@ -149,7 +149,7 @@ Examples
 	{"lat":"38.8","lng":"-77.0","radius":"10"}
 ```
 
-* POST Request to URL http://localhost:4000/api/get_using_self
+* POST Request to URL localhost:4000/api/get_using_self
 
 ![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/get_using_self.png)
 
