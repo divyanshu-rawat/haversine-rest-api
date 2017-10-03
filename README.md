@@ -1,4 +1,4 @@
-### Built a rest Api in Node.js by leveraging Node.js
+Built a rest Api in Node.js by leveraging Node.js
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/divyanshu-rawat/A-Rest-Api.svg)](https://greenkeeper.io/)
 
@@ -25,6 +25,7 @@ Live Application Back-End API
 * Username : divyanshu
 * Password : xyz
 * A JWT will be generated and used for subsequent request from Client to server !
+* You can register as well no need to rely on username :  divyanshu !!
 
 ##
 
@@ -125,13 +126,7 @@ Live Application Back-End API
 ##
 
 
-#### Examples
-
-* GET Request to URL http://localhost:4000/api/get_location    (without access token !)
-
-![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/without_access_token.png)
-
-##
+Examples
 
 * GET Request to URL http://localhost:4000/api/get_location    (with access token!)
 
@@ -140,41 +135,27 @@ Live Application Back-End API
 
 ##
 
-* GET Request to URL https://myrestfulapplication.herokuapp.com/api/users    (with access token!)
-
-![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/heroku_test_users.png)
-
-##
-
 * POST Request to URL https://myrestfulapplication.herokuapp.com/api/register  (User Registration !)
 
-![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/heroku_test.png)
+![alt tag](https://github.com/divyanshu-rawat/A-Rest-Api/blob/master/snapshots/post_location.png)
 
 ##
 
 
-## Comparison 
+## Comparison between Haversine Formula v/s Mongodb Geospatial
 * Sample Data via Postman
 
 ```
 	{"lat":"38.8","lng":"-77.0","radius":"10"}
 ```
 
-* POST Request to URL http://localhost:4000/api/get_using_self  (Just Enter LAT,LNG,RADIUS !)
+* POST Request to URL http://localhost:4000/api/get_using_self
 
 ![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/get_using_self.png)
 
 ##
 
-* Sample Data via Postman
-
-```
-	{"radius":"10","coordinates":[38.8,-77.0]}
-```
-
-##
-
-* POST Request to URL localhost:4000/api/get_using_mongodb  (Just Enter LAT,LNG,RADIUS !)
+* POST Request to URL localhost:4000/api/get_using_mongodb 
 
 ![alt tag](https://github.com/divyanshu-rawat/task/blob/master/snapshots/get_using_mongoDB.png)
 
