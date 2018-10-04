@@ -17,10 +17,9 @@ Built a rest Api in Node.js by leveraging Node.js
 
 ##
 
-Live Application Back-End API 
+Back-End API 
 
-[![Live Demo Here](https://img.shields.io/badge/website-up-orange.svg)](https://myrestfulapplication.herokuapp.com/api/users)
-
+* https://myrestfulapplication.herokuapp.com/api/users
 * Please Use POSTMAN for Testing Purpose !!
 * Authenticate Client First
 * Username : divyanshu
