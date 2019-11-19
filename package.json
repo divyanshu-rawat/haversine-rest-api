@@ -16,7 +16,7 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "jsonwebtoken": "^8.0.1",
-    "mongoose": "^4.9.8",
+    "mongoose": "^5.7.12",
     "morgan": "^1.8.1"
   },
   "devDependencies": {
